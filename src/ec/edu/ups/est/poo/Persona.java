@@ -1,5 +1,6 @@
-package ec.edu.ups.est.poo.Persona;
-import ec.edu.ups.est.poo.Direccion.Direccion;
+package ec.edu.ups.est.poo;
+
+import java.util.ArrayList;
 import java.util.List;
 public class Persona {
     private String cedula;
@@ -10,7 +11,16 @@ public class Persona {
     private List<Direccion> direcciones;
 
     protected Persona(){
+        direcciones= new ArrayList<>();
+    }
 
+    public Persona(String cedula, String nombre, String apellido, String telefono, String correo) {
+        this.cedula = cedula;
+        this.nombre = nombre;
+        this.apellido = apellido;
+        this.telefono = telefono;
+        this.correo = correo;
+        this.direcciones= new ArrayList<>();
     }
 
     public String getCedula() {
@@ -57,7 +67,23 @@ public class Persona {
         return direcciones;
     }
 
-    public void setDirecciones(List<Direccion> direcciones) {
-        this.direcciones = direcciones;
+    public void addDireccion(Direccion direccion){
+        direcciones.add(direccion);
     }
+
+    public List<Direccion> getDireccion(){
+        return direcciones;
+    }
+
+    @Override
+    public String toString() {
+        return  "Cedula: " + cedula +
+                "\nNombre: " + nombre +
+                "\nApellido: " + apellido +
+                "\nTelefono: " + telefono +
+                "\nDireccion{" +
+                "\n direcciones: " + direcciones;
+    }
+
+
 }

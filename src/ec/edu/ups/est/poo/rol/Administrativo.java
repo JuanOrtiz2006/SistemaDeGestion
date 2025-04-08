@@ -1,5 +1,5 @@
-package ec.edu.ups.est.poo.Rol;
-import ec.edu.ups.est.poo.Persona.Persona;
+package ec.edu.ups.est.poo.rol;
+import ec.edu.ups.est.poo.Persona;
 import java.util.List;
 public class Administrativo extends Persona{
 
