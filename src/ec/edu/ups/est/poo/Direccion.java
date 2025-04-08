@@ -1,5 +1,5 @@
 package ec.edu.ups.est.poo;
-import ec.edu.ups.est.poo.Enums.TipoDireccion;
+import ec.edu.ups.est.poo.enums.TipoDireccion;
 public class Direccion {
     private TipoDireccion tipoDireccion;
     private String pais;
@@ -9,7 +9,7 @@ public class Direccion {
     private String calleSecundaria;
     private String numeracion;
 
-    private Direccion(){
+    public Direccion(){
 
     }
 
@@ -82,7 +82,7 @@ public class Direccion {
     @Override
     public String toString() {
         return "Direccion{" +
-                "\n Tipo de direccion: " + tipoDireccion+
+                "\nTipo de direccion: " + tipoDireccion+
                 "\nPais: "+ pais +
                 "\nProvincia: " + provinicia +
                 "\nCiudad: " + ciudad +

@@ -1,6 +1,6 @@
 package ec.edu.ups.est.poo;
-import ec.edu.ups.est.poo.Enums.TipoDireccion;
 
+import java.util.ArrayList;
 import  java.util.GregorianCalendar;
 import java.util.List;
 
@@ -11,8 +11,10 @@ public class Institucion {
     private List<String> sedes;
     private GregorianCalendar fechaInicio;
     private Direccion direccion;
+    private List<Asignacion> asignaciones;
 
-    private Institucion(){
+    public Institucion(){
+        this.asignaciones = new ArrayList<>();
     }
 
     public Institucion(int id, String nombre, List<String> sedes, GregorianCalendar fechaInicio) {
@@ -20,6 +22,7 @@ public class Institucion {
         this.nombre = nombre;
         this.sedes = sedes;
         this.fechaInicio = fechaInicio;
+        this.asignaciones = new ArrayList<>();
     }
 
 
@@ -61,6 +64,14 @@ public class Institucion {
 
     public void setDireccion(Direccion direccion) {
         this.direccion = direccion;
+    }
+
+    public void addAsignacion(Asignacion asignacion){
+        asignaciones.add(asignacion);
+    }
+
+    public List<Asignacion> getAsignacion(){
+        return asignaciones;
     }
 
     @Override

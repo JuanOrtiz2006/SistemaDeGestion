@@ -4,7 +4,7 @@ public class Estudiante extends Persona{
 
     private String carrera;
 
-    protected Estudiante(){
+    public Estudiante(){
 
     }
 
@@ -16,5 +16,9 @@ public class Estudiante extends Persona{
         this.carrera = carrera;
     }
 
-
+    @Override
+    public String toString() {
+        return super.toString() +
+                "\nCarrera: " + carrera;
+    }
 }

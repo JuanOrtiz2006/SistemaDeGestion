@@ -6,14 +6,12 @@ public class Visitante extends Persona{
     private GregorianCalendar fechaEntrada;
     private GregorianCalendar fechaSalida;
 
-    protected Visitante(){
+    public Visitante(){
 
     }
-
     public String getMotivoVisita() {
         return motivoVisita;
     }
-
     public void setMotivoVisita(String motivoVisita) {
         this.motivoVisita = motivoVisita;
     }
@@ -32,5 +30,13 @@ public class Visitante extends Persona{
 
     public void setFechaSalida(GregorianCalendar fechaSalida) {
         this.fechaSalida = fechaSalida;
+    }
+
+    @Override
+    public String toString() {
+        return super.toString() +
+                "\nMotivo: " + motivoVisita +
+                "\nFecha de entrada: " + fechaEntrada +
+                "\nFecha de salida: " + fechaSalida;
     }
 }

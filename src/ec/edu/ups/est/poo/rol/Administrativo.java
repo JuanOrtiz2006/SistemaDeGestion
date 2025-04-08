@@ -6,7 +6,7 @@ public class Administrativo extends Persona{
     private List<String> cargos;
     private List<String> responsabilidades;
 
-    protected Administrativo(){
+    public Administrativo(){
 
     }
 
@@ -24,5 +24,12 @@ public class Administrativo extends Persona{
 
     public void setResponsabilidades(List<String> responsabilidades) {
         this.responsabilidades = responsabilidades;
+    }
+
+    @Override
+    public String toString() {
+        return super.toString() +
+                "\nCargos: " + cargos +
+                "\nResponsabilidades: " + responsabilidades;
     }
 }

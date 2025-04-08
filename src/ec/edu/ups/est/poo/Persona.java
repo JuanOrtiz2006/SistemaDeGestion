@@ -10,7 +10,7 @@ public class Persona {
     private String correo;
     private List<Direccion> direcciones;
 
-    protected Persona(){
+    public Persona(){
         direcciones= new ArrayList<>();
     }
 
@@ -82,7 +82,7 @@ public class Persona {
                 "\nApellido: " + apellido +
                 "\nTelefono: " + telefono +
                 "\nDireccion{" +
-                "\n direcciones: " + direcciones;
+                "\ndirecciones: " + direcciones;
     }
 
 

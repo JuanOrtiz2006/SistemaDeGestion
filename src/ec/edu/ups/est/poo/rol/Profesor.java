@@ -6,7 +6,7 @@ public class Profesor extends Persona{
     private List<String> titulosAcademicos;
     private List<String> areasDeEscpecializacion;
 
-    protected Profesor(){
+    public Profesor(){
 
     }
 
@@ -24,5 +24,12 @@ public class Profesor extends Persona{
 
     public void setAreasDeEscpecializacion(List<String> areasDeEscpecializacion) {
         this.areasDeEscpecializacion = areasDeEscpecializacion;
+    }
+
+    @Override
+    public String toString() {
+        return super.toString() +
+                "\nTitulos: " + titulosAcademicos +
+                "\nEspecializaciones: " + areasDeEscpecializacion;
     }
 }

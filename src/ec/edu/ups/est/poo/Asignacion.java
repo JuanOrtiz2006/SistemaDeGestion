@@ -1,15 +1,15 @@
 package ec.edu.ups.est.poo;
 import java.util.GregorianCalendar;
-import ec.edu.ups.est.poo.Enums.TipoRol;
+import ec.edu.ups.est.poo.enums.TipoRol;
 public class Asignacion {
     private Persona persona;
     private GregorianCalendar fechaInicio;
     private TipoRol rol;
 
-    private Asignacion(){
+
+    public Asignacion(){
 
     }
-
     public Asignacion(Persona persona, GregorianCalendar fechaInicio, TipoRol rol) {
         this.persona = persona;
         this.fechaInicio = fechaInicio;
@@ -43,7 +43,7 @@ public class Asignacion {
     @Override
     public String toString() {
         return "Persona: " + persona +
-                "\n Fecha de inicio: " + fechaInicio +
+                "\nFecha de inicio: " + fechaInicio +
                 "\nRol: " + rol;
     }
 }

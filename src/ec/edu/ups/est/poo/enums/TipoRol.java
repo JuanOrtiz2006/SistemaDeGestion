@@ -1,4 +1,4 @@
-package ec.edu.ups.est.poo.Enums;
+package ec.edu.ups.est.poo.enums;
 
 public enum TipoRol {
     ADMINISTRATIVO,
