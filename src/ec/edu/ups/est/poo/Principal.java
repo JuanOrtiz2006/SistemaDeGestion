@@ -35,6 +35,10 @@ public class Principal {
         estudiante.addDireccion(new Direccion(TipoDireccion.CASA, "Ecuador", "Azuay", "Cuenca", "Av. de las Américas", "Universitaria", "1234"));
 
         Profesor profesor = new Profesor();
+        List<String> titulos = Arrays.asList("Ingeniero Quimico", "Matematico", "Fisico Nuclear");
+        profesor.setTitulosAcademicos(titulos);
+        List<String> areas = Arrays.asList("Ciencia", "Matematica", "Fisica");
+        profesor.setAreasDeEscpecializacion(areas);
         profesor.setCedula("0103527966");
         profesor.setNombre("Carlos");
         profesor.setApellido("Pérez");
@@ -56,6 +60,10 @@ public class Principal {
 
         // Crear personas (Administrativo y Visitante para Institución 2)
         Administrativo administrativo = new Administrativo();
+        List<String> responsabilidades = Arrays.asList("Mantenimiento de red", "Mantenimiento de maquinas");
+        administrativo.setResponsabilidades(responsabilidades);
+        List<String> cargos = Arrays.asList("Ingeniero en sistemas", "CEO de empresa");
+        administrativo.setCargos(cargos);
         administrativo.setCedula("0123456789");
         administrativo.setNombre("Pedro");
         administrativo.setApellido("García");

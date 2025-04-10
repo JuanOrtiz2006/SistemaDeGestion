@@ -77,7 +77,7 @@ public class Persona {
 
     @Override
     public String toString() {
-        return  "Cedula: " + cedula +
+        return  "\nCedula: " + cedula +
                 "\nNombre: " + nombre +
                 "\nApellido: " + apellido +
                 "\nTelefono: " + telefono +
