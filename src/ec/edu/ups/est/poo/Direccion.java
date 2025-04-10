@@ -89,7 +89,8 @@ public class Direccion {
                 "\nCiudad: " + ciudad +
                 "\nCalle Principal: "+ callePrincipal +
                 "\nCalle Secundaria: " + calleSecundaria +
-                "\nNumeracion: " + numeracion;
+                "\nNumeracion: " + numeracion +
+                "\n}";
     }
 }
 

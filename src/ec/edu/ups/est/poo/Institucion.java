@@ -86,7 +86,7 @@ public class Institucion {
                 "\nInstitucion: " + nombre +
                 "\nSedes: " + sedes +
                 "\nFecha de Inicio: " + fechaFormateada +
-                "\nDireccion: " + direccion +
+                "\n" + direccion +
                 "\nAsignaciones: " + asignaciones;
 
     }

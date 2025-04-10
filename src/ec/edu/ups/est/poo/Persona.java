@@ -81,8 +81,7 @@ public class Persona {
                 "\nNombre: " + nombre +
                 "\nApellido: " + apellido +
                 "\nTelefono: " + telefono +
-                "\nDireccion{" +
-                "\ndirecciones: " + direcciones;
+                "\nDirecciones{" + direcciones;
     }
 
 

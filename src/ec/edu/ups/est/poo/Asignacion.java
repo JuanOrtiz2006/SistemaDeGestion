@@ -45,8 +45,9 @@ public class Asignacion {
     public String toString() {
         SimpleDateFormat formato = new SimpleDateFormat("dd/MM/yyyy");
         String fechaFormateada = (fechaInicio != null) ? formato.format(fechaInicio.getTime()) : "Sin fecha";
-        return "Persona: " + persona +
-                "\nFecha de inicio: " + fechaFormateada +
-                "\nRol: " + rol;
+        return  "\nFecha de inicio: " + fechaFormateada +
+                "\nRol: " + rol +
+                "\nPersona: {" + persona +
+                "\n}";
     }
 }
