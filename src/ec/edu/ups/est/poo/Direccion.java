@@ -13,15 +13,16 @@ public class Direccion {
 
     }
 
-    public Direccion(TipoDireccion tipoDireccion, String ciudad, String callePrincipal, String calleSecundaria, String provinicia, String pais, String numeracion) {
+    public Direccion(TipoDireccion tipoDireccion, String pais, String provinicia, String ciudad, String callePrincipal, String calleSecundaria, String numeracion) {
         this.tipoDireccion = tipoDireccion;
+        this.pais = pais;
+        this.provinicia = provinicia;
         this.ciudad = ciudad;
         this.callePrincipal = callePrincipal;
         this.calleSecundaria = calleSecundaria;
-        this.provinicia = provinicia;
-        this.pais = pais;
         this.numeracion = numeracion;
     }
+
 
     public String getCiudad() {
         return ciudad;

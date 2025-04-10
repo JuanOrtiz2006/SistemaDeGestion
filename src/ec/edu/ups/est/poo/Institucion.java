@@ -1,5 +1,8 @@
 package ec.edu.ups.est.poo;
 
+import ec.edu.ups.est.poo.enums.TipoDireccion;
+
+import java.text.SimpleDateFormat;
 import java.util.ArrayList;
 import  java.util.GregorianCalendar;
 import java.util.List;
@@ -17,12 +20,16 @@ public class Institucion {
         this.asignaciones = new ArrayList<>();
     }
 
-    public Institucion(int id, String nombre, List<String> sedes, GregorianCalendar fechaInicio) {
+    public Institucion(int id, String nombre, GregorianCalendar fechaInicio, List<String> sedes, List<Asignacion> asignaciones) {
         this.id = id;
         this.nombre = nombre;
         this.sedes = sedes;
         this.fechaInicio = fechaInicio;
-        this.asignaciones = new ArrayList<>();
+        this.asignaciones = asignaciones;
+    }
+
+    public void addDireccion( TipoDireccion tipoDireccion, String pais, String provinicia, String ciudad, String callePrincipal, String calleSecundaria, String numeracion) {
+        this.direccion = new Direccion(tipoDireccion, pais,provinicia,ciudad,callePrincipal,calleSecundaria,numeracion);
     }
 
 
@@ -62,10 +69,6 @@ public class Institucion {
         return  direccion;
     }
 
-    public void setDireccion(Direccion direccion) {
-        this.direccion = direccion;
-    }
-
     public void addAsignacion(Asignacion asignacion){
         asignaciones.add(asignacion);
     }
@@ -76,11 +79,13 @@ public class Institucion {
 
     @Override
     public String toString() {
+        SimpleDateFormat formato = new SimpleDateFormat("dd/MM/yyyy");
+        String fechaFormateada = (fechaInicio != null) ? formato.format(fechaInicio.getTime()) : "Sin fecha";
+
         return "Id: " + id +
                 "\nInstitucion: " + nombre +
                 "\nSedes: " + sedes +
-                "\nFecha de Inicio" + fechaInicio +
+                "\nFecha de Inicio: " + fechaFormateada +
                 "\nDireccion: " + direccion;
-
     }
 }
